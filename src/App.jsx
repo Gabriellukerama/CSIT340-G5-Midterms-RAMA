@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar.jsx"
-
+import Intro from "./components/Intro.jsx"
 function App() {
   const [stars, setStars] = useState(0);
   const [downloads, setDownloads] = useState(0);
@@ -23,16 +23,10 @@ function App() {
     setDownloads(0);
     setIssues(5);
   }
-
   return (
     <div className="flex min-h-screen flex-col bg-[#FFF9F2] text-[#800020]">
       <Navbar/>
-
-      <header className="px-20 pt-8 text-center">
-        <h2 className="text-7xl font-bold">Build pages faster.</h2>
-        <p className="mt-5 text-2xl text-[#000000]">An open-source component kit for React.</p>
-        <p className="mt-2 text-xl text-[#000000]">Made by Gabriel Luke C. Rama</p>
-      </header>
+      <Intro/>
 
       <div className="flex justify-center gap-4 py-6">
         <button
@@ -43,7 +37,7 @@ function App() {
         </button>
         <button
           className="cursor-pointer rounded-lg bg-[#D45060] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleDownload}
+          onClick={handleDownload} 
         >
           Download
         </button>
