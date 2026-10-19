@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar.jsx"
 import Intro from "./components/Intro.jsx"
 import Features from "./components/Features.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -30,7 +31,7 @@ function App() {
       <Navbar/>
       <Intro/>
       <Features/>
-
+      <Footer/>
       <div className="flex justify-center gap-4 py-6">
         <button
           className="cursor-pointer rounded-lg bg-[#800020] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
@@ -73,9 +74,6 @@ function App() {
         </div>
       </div>
 
-      <footer className="mt-auto bg-[#F3E6D5] px-20 py-6 text-center text-xl">
-        <p>Maroon UI is free and open source.</p>
-      </footer>
     </div>
   );
 }
